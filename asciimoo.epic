@@ -1,0 +1,23 @@
+[hero]
+name        = Asciimoo
+strength    = 2
+dexterity   = 6
+vitality    = 10
+wisdom      = 16
+intellect   = 16
+charm       = 0
+luck        = 0
+epicness    = 0
+xp          = 0
+level       = 0
+monkey      = 0  # will be a hash
+description = "A pink wombat, master of dark spells and forces"
+[items]
+[[weapon]]
+basic_sword = 1
+[[shield]]
+basic_shiled = 1
+
+[stash]
+
+[phobias]
