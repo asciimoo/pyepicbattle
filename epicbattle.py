@@ -51,6 +51,27 @@ class Creature(object):
         self.phobias = c['phobias']
         return self
 
+    def saveHero(self, f):
+        c = ConfigObj()
+        c.filename = f
+        c['hero'] = {'name': self.name,
+                  'strength': self.strength,
+                  'dexterity': self.dexterity,
+                  'vitality': self.vitality,
+                  'wisdom': self.wisdom,
+                  'intellect': self.intellect,
+                  'luck': self.luck,
+                  'charm': self.charm,
+                  'epicness': self.epicness,
+                  'xp': self.xp,
+                  'level': self.level,
+                  'monkey': self.monkey,
+                  'description': self.description}
+        c['items'] = self.items
+        c['stash'] = self.stash
+        c['phobias'] = self.phobias
+        c.write()
+
 # TODOS ;)
 # Phobie generator !!
 # random name generator
@@ -128,6 +149,7 @@ if __name__ == '__main__':
     battle = EpicBattle(Pot, asciimoo, Creature('asdf'))
     print battle.start()
     print asciimoo.__dict__
+    asciimoo.saveHero('asciimoo2.epic')
 
 
 
